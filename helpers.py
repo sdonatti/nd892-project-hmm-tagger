@@ -1,4 +1,3 @@
-
 import os
 import matplotlib.pyplot as plt
 import matplotlib.image as mplimg
@@ -11,6 +10,7 @@ from collections import namedtuple, OrderedDict
 
 
 Sentence = namedtuple("Sentence", "words tags")
+
 
 def read_data(filename):
     """Read tagged sentence data"""
@@ -123,7 +123,6 @@ class Dataset(namedtuple("_Dataset", "sentences keys vocab X tagset Y training_s
         word_sequences = tuple([sentences[k].words for k in keys])
         tag_sequences = tuple([sentences[k].tags for k in keys])
         N = sum(1 for _ in chain(*(s.words for s in sentences.values())))
-        
         # split data into train/test sets
         _keys = list(keys)
         if seed is not None: random.seed(seed)
