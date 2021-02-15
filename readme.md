@@ -32,4 +32,4 @@ jupyter notebook
 
 ### License
 
-This project is licensed under [Copyright (c) 2018 Udacity, Inc.](LICENSE)
+This project is licensed under the [MIT License](LICENSE)
